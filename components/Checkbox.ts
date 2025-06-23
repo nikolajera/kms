@@ -15,12 +15,12 @@ export class Checkbox {
   async checkByText(text: string) {
     await this.checkboxIsChecked(text, false);
     const navOption = this.page.getByText(text);
-    await navOption.click();
+    await navOption.check();
   }
 
   async uncheckByText(text: string) {
     await this.checkboxIsChecked(text);
     const navOption = this.page.getByText(text);
-    await navOption.click();
+    await navOption.uncheck();
   }
 }
